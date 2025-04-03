@@ -11,7 +11,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: top;
             height: 100vh;
             background-color: #f4f4f4;
         }
@@ -24,41 +24,88 @@
         .main-image {
             position: relative;
             width: 1000px;
-            height: 550px;
+            height: 400px;
             background: url('images/schemaIncoterms.jpg') no-repeat center center;
             background-size: contain;
-            border: 2px solid #ccc;
+           
         }
 
         .slot {
             position: absolute;
             width: 100px;
-            height: 45px;
+            height: 40px;
             border: 2px dashed #000;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgb(255, 255, 255);
         }
 
         /* Position des 9 emplacements sur l'image principale */
-        .slot:nth-child(1) { top: 170px; left: 15px; } /*EXW*/
-        .slot:nth-child(2) { top: 170px; left: 140px; } /*FCA*/
-        .slot:nth-child(3) { top: 185px; left: 510px; } /*Frontière UE*/
-        .slot:nth-child(4) { top: 130px; left: 510px; } /*Frontière FR*/
-        .slot:nth-child(5) { top: 165px; left: 665px; } /*Transp Ass hors UE*/
-        .slot:nth-child(6) { top: 165px; left: 775px; } /*Valeur 1ère desti*/
-        .slot:nth-child(7) { top: 165px; left: 885px; } /*Transport UE*/
-        .slot:nth-child(8) { top: 0px; left: 0px; } /*port de Genes*/
-        .slot:nth-child(9) { top: 0px; left: 0px; } /*Transport FR*/
+        .slot:nth-child(1) { top: 100px; left: 15px; } /*EXW*/
+        .slot:nth-child(2) { top: 100px; left: 140px; } /*FCA*/
+        .slot:nth-child(3) { top: 75px; left: 510px; } /*CPT*/
+        .slot:nth-child(4) { top: 130px; left: 510px; } /*CIP*/
+        .slot:nth-child(5) { top: 90px; left: 665px; } /*DAP*/
+        .slot:nth-child(6) { top: 90px; left: 775px; } /*DPU*/
+        .slot:nth-child(7) { top: 90px; left: 885px; } /*DDP*/
+        .slot:nth-child(8) { top: 390px; left: 15px; } /*valeurmarch1*/
+        .slot:nth-child(9) { top: 440px; left: 15px; } /*emballage1*/
+        .slot:nth-child(10) { top: 390px; left: 140px; } /*valeurmarch2*/
+        .slot:nth-child(11) { top: 440px; left: 140px; } /*emballage2*/
+        .slot:nth-child(12) { top: 490px; left: 140px; } /*chargement*/
+        .slot:nth-child(13) { top: 540px; left: 140px; } /*preach*/
+        .slot:nth-child(14) { top: 590px; left: 140px; } /*douanex*/
+        .slot:nth-child(15) { top: 390px; left: 510px; } /*valeur*/
+        .slot:nth-child(16) { top: 440px; left: 510px; } /*emballage*/
+        .slot:nth-child(17) { top: 490px; left: 510px; } /*chargement*/
+        .slot:nth-child(18) { top: 540px; left: 510px; } /*preach*/
+        .slot:nth-child(19) { top: 590px; left: 510px; } /*douanex*/
+        .slot:nth-child(20) { top: 640px; left: 510px; } /*thc*/
+        .slot:nth-child(21) { top: 690px; left: 510px; } /*trasp*/
+        .slot:nth-child(22) { top: 790px; left: 510px; } /*trasp*/
+        .slot:nth-child(23) { top: 390px; left: 665px; } /*trasp*/
+        .slot:nth-child(24) { top: 440px; left: 665px; } /*trasp*/
+        .slot:nth-child(25) { top: 490px; left: 665px; } /*trasp*/
+        .slot:nth-child(26) { top: 540px; left: 665px; } /*trasp*/
+        .slot:nth-child(27) { top: 590px; left: 665px; } /*trasp*/
+        .slot:nth-child(28) { top: 640px; left: 665px; } /*trasp*/
+        .slot:nth-child(29) { top: 690px; left: 665px; } /*trasp*/
+        .slot:nth-child(30) { top: 740px; left: 665px; } /*trasp*/
+        .slot:nth-child(31) { top: 740px; left: 665px; } /*trasp*/
+        .slot:nth-child(32) { top: 790px; left: 665px; } /*trasp*/
+        .slot:nth-child(33) { top: 840px; left: 665px; } /*trasp*/
+        .slot:nth-child(34) { top: 390px; left: 775px; } /*trasp*/
+        .slot:nth-child(35) { top: 440px; left: 775px; } /*trasp*/
+        .slot:nth-child(36) { top: 490px; left: 775px; } /*trasp*/
+        .slot:nth-child(37) { top: 540px; left: 775px; } /*trasp*/
+        .slot:nth-child(38) { top: 590px; left: 775px; } /*trasp*/
+        .slot:nth-child(39) { top: 640px; left: 775px; } /*trasp*/
+        .slot:nth-child(40) { top: 690px; left: 775px; } /*trasp*/
+        .slot:nth-child(41) { top: 740px; left: 775px; } /*trasp*/
+        .slot:nth-child(42) { top: 790px; left: 775px; } /*trasp*/
+        .slot:nth-child(43) { top: 840px; left: 775px; } /*trasp*/
+        .slot:nth-child(44) { top: 890px; left: 775px; } /*trasp*/
+        .slot:nth-child(45) { top: 390px; left: 885px; } /*trasp*/
+        .slot:nth-child(46) { top: 440px; left: 885px; } /*trasp*/
+        .slot:nth-child(47) { top: 490px; left: 885px; } /*trasp*/
+        .slot:nth-child(48) { top: 540px; left: 885px; } /*trasp*/
+        .slot:nth-child(49) { top: 590px; left: 885px; } /*trasp*/
+        .slot:nth-child(50) { top: 640px; left: 885px; } /*trasp*/
+        .slot:nth-child(51) { top: 690px; left: 885px; } /*trasp*/
+        .slot:nth-child(52) { top: 740px; left: 885px; } /*trasp*/
+        .slot:nth-child(53) { top: 790px; left: 885px; } /*trasp*/
+        .slot:nth-child(54) { top: 840px; left: 885px; } /*trasp*/
+        .slot:nth-child(55) { top: 890px; left: 885px; } /*trasp*/
+        .slot:nth-child(56) { top: 940px; left: 885px; } /*trasp*/
+        .slot:nth-child(57) { top: 990px; left: 885px; } /*trasp*/
 
         .side-images {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            gap: 20px; /* Space between items */
+            grid-template-columns: repeat(5, 1fr); /* 3 columns */
+            gap: 5px; /* Space between items */
         }
 
         .draggable {
             width: 100px;
-            height: 45px;
-            border: 2px solid #000;
+            height: 40px;
             cursor: grab;
         }
 
@@ -82,6 +129,54 @@
             <div class="slot" data-slot="7"></div>
             <div class="slot" data-slot="8"></div>
             <div class="slot" data-slot="9"></div>
+            <div class="slot" data-slot="10"></div>
+            <div class="slot" data-slot="11"></div>
+            <div class="slot" data-slot="12"></div>
+            <div class="slot" data-slot="13"></div>
+            <div class="slot" data-slot="14"></div>
+            <div class="slot" data-slot="15"></div>
+            <div class="slot" data-slot="16"></div>
+            <div class="slot" data-slot="17"></div>
+            <div class="slot" data-slot="18"></div>
+            <div class="slot" data-slot="19"></div>
+            <div class="slot" data-slot="20"></div>
+            <div class="slot" data-slot="21"></div>
+            <div class="slot" data-slot="22"></div>
+            <div class="slot" data-slot="23"></div>
+            <div class="slot" data-slot="24"></div>
+            <div class="slot" data-slot="25"></div>
+            <div class="slot" data-slot="26"></div>
+            <div class="slot" data-slot="27"></div>
+            <div class="slot" data-slot="28"></div>
+            <div class="slot" data-slot="29"></div>
+            <div class="slot" data-slot="30"></div>
+            <div class="slot" data-slot="31"></div>
+            <div class="slot" data-slot="32"></div>
+            <div class="slot" data-slot="33"></div>
+            <div class="slot" data-slot="34"></div>
+            <div class="slot" data-slot="35"></div>
+            <div class="slot" data-slot="36"></div>
+            <div class="slot" data-slot="37"></div>
+            <div class="slot" data-slot="38"></div>
+            <div class="slot" data-slot="39"></div>
+            <div class="slot" data-slot="40"></div>
+            <div class="slot" data-slot="41"></div>
+            <div class="slot" data-slot="42"></div>
+            <div class="slot" data-slot="43"></div>
+            <div class="slot" data-slot="44"></div>
+            <div class="slot" data-slot="45"></div>
+            <div class="slot" data-slot="46"></div>
+            <div class="slot" data-slot="47"></div>
+            <div class="slot" data-slot="48"></div>
+            <div class="slot" data-slot="49"></div>
+            <div class="slot" data-slot="50"></div>
+            <div class="slot" data-slot="51"></div>
+            <div class="slot" data-slot="52"></div>
+            <div class="slot" data-slot="53"></div>
+            <div class="slot" data-slot="54"></div>
+            <div class="slot" data-slot="55"></div>
+            <div class="slot" data-slot="56"></div>
+            <div class="slot" data-slot="57"></div>
         </div>
 
         <!-- Images à déplacer -->
@@ -108,46 +203,151 @@
                 <img src="images/ddp.png">
             </div>
             <div class="draggable" draggable="true" id="valeurMarch1">
-                <img src="images/valeurMarch1.png">
+                <img src="images/valeurMarch11.png">
             </div>
             <div class="draggable" draggable="true" id="valeurMarch2">
-                <img src="images/valeurMarch2.png" >
+                <img src="images/valeurMarch11.png">
             </div>
             <div class="draggable" draggable="true" id="valeurMarch3">
-                <img src="images/valeurMarch3.png" >
+                <img src="images/valeurMarch11.png">
             </div>
             <div class="draggable" draggable="true" id="valeurMarch4">
-                <img src="images/valeurMarch4.png" >
+                <img src="images/valeurMarch11.png">
             </div>
             <div class="draggable" draggable="true" id="valeurMarch5">
-                <img src="images/valeurMarch5.png" >
+                <img src="images/valeurMarch11.png">
             </div>
             <div class="draggable" draggable="true" id="valeurMarch6">
-                <img src="images/valeurMarch6.png" >
-            </div>
-            <div class="draggable" draggable="true" id="valeurMarch7">
-                <img src="images/valeurMarch7.png" >
+                <img src="images/valeurMarch11.png">
             </div>
             <div class="draggable" draggable="true" id="emballage1">
-                <img src="images/emballage1.png" >
+                <img src="images/emballage11.png" >
+            </div>
+            <div class="draggable" draggable="true" id="emballage2">
+                <img src="images/emballage11.png" >
             </div>
             <div class="draggable" draggable="true" id="emballage3">
-                <img src="images/emballage3.png">
+                <img src="images/emballage11.png" >
             </div>
             <div class="draggable" draggable="true" id="emballage4">
-                <img src="images/emballage4.png">
+                <img src="images/emballage11.png" >
             </div>
             <div class="draggable" draggable="true" id="emballage5">
-                <img src="images/emballage5.png">
+                <img src="images/emballage11.png" >
             </div>
             <div class="draggable" draggable="true" id="emballage6">
-                <img src="images/emballage6.png">
-            </div>
-            <div class="draggable" draggable="true" id="emballage7">
-                <img src="images/emballage7.png">
+                <img src="images/emballage11.png" >
             </div>
             <div class="draggable" draggable="true" id="chargement1">
-                <img src="images/chargement1.png">
+                <img src="images/chargement11.png">
+            </div>
+            <div class="draggable" draggable="true" id="chargement2">
+                <img src="images/chargement11.png">
+            </div>
+            <div class="draggable" draggable="true" id="chargement3">
+                <img src="images/chargement11.png">
+            </div>
+            <div class="draggable" draggable="true" id="chargement4">
+                <img src="images/chargement11.png">
+            </div>
+            <div class="draggable" draggable="true" id="chargement5">
+                <img src="images/chargement11.png">
+            </div>
+            <div class="draggable" draggable="true" id="preach1">
+                <img src="images/preach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="preach2">
+                <img src="images/preach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="preach3">
+                <img src="images/preach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="preach4">
+                <img src="images/preach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="preach5">
+                <img src="images/preach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="douaneexp1">
+                <img src="images/douaneexp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="douaneexp2">
+                <img src="images/douaneexp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="douaneexp3">
+                <img src="images/douaneexp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="douaneexp4">
+                <img src="images/douaneexp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="douaneexp5">
+                <img src="images/douaneexp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC1">
+                <img src="images/THC11.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC2">
+                <img src="images/THC11.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC3">
+                <img src="images/THC11.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC4">
+                <img src="images/THC11.png">
+            </div>
+            <div class="draggable" draggable="true" id="trasp11">
+                <img src="images/trasp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="trasp12">
+                <img src="images/trasp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="trasp13">
+                <img src="images/trasp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="trasp14">
+                <img src="images/trasp11.jpg.png">
+            </div>
+            <div class="draggable" draggable="true" id="assur11">
+                <img src="images/assur11.png">
+            </div>
+            <div class="draggable" draggable="true" id="assur12">
+                <img src="images/assur11.png">
+            </div>
+            <div class="draggable" draggable="true" id="assur13">
+                <img src="images/assur11.png">
+            </div>
+            <div class="draggable" draggable="true" id="assur14">
+                <img src="images/assur11.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC12">
+                <img src="images/THC12.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC13">
+                <img src="images/THC12.png">
+            </div>
+            <div class="draggable" draggable="true" id="THC14">
+                <img src="images/THC12.png">
+            </div>
+            <div class="draggable" draggable="true" id="postach11">
+                <img src="images/postach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="postach12">
+                <img src="images/postach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="postach13">
+                <img src="images/postach11.png">
+            </div>
+            <div class="draggable" draggable="true" id="dechar11">
+                <img src="images/dechar11.png">
+            </div>
+            <div class="draggable" draggable="true" id="liquid11">
+                <img src="images/liquid11.png">
+            </div>
+            <div class="draggable" draggable="true" id="had11">
+                <img src="images/had11.png">
+            </div>
+            <div class="draggable" draggable="true" id="tvaHad11">
+                <img src="images/tvaHad11.png">
             </div>
         </div>
     </div>
