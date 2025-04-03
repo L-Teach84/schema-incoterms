@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note de Valeur</title>
+    <title>Schéma Incoterms</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,31 +23,31 @@
 
         .main-image {
             position: relative;
-            width: 700px;
-            height: 570px;
-            background: url('images/NoteDeValeur.jpg') no-repeat center center;
-            background-size: cover;
+            width: 1000px;
+            height: 550px;
+            background: url('images/schemaIncoterms.jpg') no-repeat center center;
+            background-size: contain;
             border: 2px solid #ccc;
         }
 
         .slot {
             position: absolute;
             width: 100px;
-            height: 60px;
+            height: 45px;
             border: 2px dashed #000;
             background-color: rgba(255, 255, 255, 0.5);
         }
 
         /* Position des 9 emplacements sur l'image principale */
-        .slot:nth-child(1) { top: 510px; left: 365px; } /*Valeur en douane*/
-        .slot:nth-child(2) { top: 500px; left: 195px; } /*Valeur statistique*/
-        .slot:nth-child(3) { top: 10px; left: 375px; } /*Frontière UE*/
-        .slot:nth-child(4) { top: 255px; left: 140px; } /*Frontière FR*/
-        .slot:nth-child(5) { top: 255px; left: 560px; } /*Transp Ass hors UE*/
-        .slot:nth-child(6) { top: 430px; left: 105px; } /*Valeur 1ère desti*/
-        .slot:nth-child(7) { top: 320px; left: 290px; } /*Transport UE*/
-        .slot:nth-child(8) { top: 430px; left: 260px; } /*port de Genes*/
-        .slot:nth-child(9) { top: 335px; left: 95px; } /*Transport FR*/
+        .slot:nth-child(1) { top: 170px; left: 15px; } /*EXW*/
+        .slot:nth-child(2) { top: 170px; left: 140px; } /*FCA*/
+        .slot:nth-child(3) { top: 185px; left: 510px; } /*Frontière UE*/
+        .slot:nth-child(4) { top: 130px; left: 510px; } /*Frontière FR*/
+        .slot:nth-child(5) { top: 165px; left: 665px; } /*Transp Ass hors UE*/
+        .slot:nth-child(6) { top: 165px; left: 775px; } /*Valeur 1ère desti*/
+        .slot:nth-child(7) { top: 165px; left: 885px; } /*Transport UE*/
+        .slot:nth-child(8) { top: 0px; left: 0px; } /*port de Genes*/
+        .slot:nth-child(9) { top: 0px; left: 0px; } /*Transport FR*/
 
         .side-images {
             display: grid;
@@ -57,7 +57,7 @@
 
         .draggable {
             width: 100px;
-            height: 60px;
+            height: 45px;
             border: 2px solid #000;
             cursor: grab;
         }
@@ -86,32 +86,68 @@
 
         <!-- Images à déplacer -->
         <div class="side-images">
-            <div class="draggable" draggable="true" id="TranspAssFr">
-                <img src="images/TranspAssFr.jpg">
+            <div class="draggable" draggable="true" id="EXW">
+                <img src="images/exw.png">
             </div>
-            <div class="draggable" draggable="true" id="TransAssUE">
-                <img src="images/TranspAssUE.jpg" >
+            <div class="draggable" draggable="true" id="FCA">
+                <img src="images/fca.png">
             </div>
-            <div class="draggable" draggable="true" id="FrontiereFR">
-                <img src="images/FrontiereFR.jpg" >
+            <div class="draggable" draggable="true" id="cpt">
+                <img src="images/cpt.png">
             </div>
-            <div class="draggable" draggable="true" id="FrontiereUE">
-                <img src="images/FrontiereUE.jpg" >
+            <div class="draggable" draggable="true" id="CIP">
+                <img src="images/cip.png">
             </div>
-            <div class="draggable" draggable="true" id="MiseAQuaiPortDeGenes">
-                <img src="images/MiseAQuaiPortDeGenes.jpg" >
+            <div class="draggable" draggable="true" id="dap">
+                <img src="images/dap.png">
             </div>
-            <div class="draggable" draggable="true" id="Valeur1ereDestination">
-                <img src="images/Valeur1ereDestination.jpg" >
+            <div class="draggable" draggable="true" id="dpu">
+                <img src="images/dpu.png">
             </div>
-            <div class="draggable" draggable="true" id="ValeurEnDouane">
-                <img src="images/ValeurEnDouane.jpg" >
+            <div class="draggable" draggable="true" id="ddp">
+                <img src="images/ddp.png">
             </div>
-            <div class="draggable" draggable="true" id="ValeurStatistique">
-                <img src="images/ValeurStatistique.jpg" >
+            <div class="draggable" draggable="true" id="valeurMarch1">
+                <img src="images/valeurMarch1.png">
             </div>
-            <div class="draggable" draggable="true" id="TranspAssortHorsUE">
-                <img src="images/TranspAsshorsUE.jpg">
+            <div class="draggable" draggable="true" id="valeurMarch2">
+                <img src="images/valeurMarch2.png" >
+            </div>
+            <div class="draggable" draggable="true" id="valeurMarch3">
+                <img src="images/valeurMarch3.png" >
+            </div>
+            <div class="draggable" draggable="true" id="valeurMarch4">
+                <img src="images/valeurMarch4.png" >
+            </div>
+            <div class="draggable" draggable="true" id="valeurMarch5">
+                <img src="images/valeurMarch5.png" >
+            </div>
+            <div class="draggable" draggable="true" id="valeurMarch6">
+                <img src="images/valeurMarch6.png" >
+            </div>
+            <div class="draggable" draggable="true" id="valeurMarch7">
+                <img src="images/valeurMarch7.png" >
+            </div>
+            <div class="draggable" draggable="true" id="emballage1">
+                <img src="images/emballage1.png" >
+            </div>
+            <div class="draggable" draggable="true" id="emballage3">
+                <img src="images/emballage3.png">
+            </div>
+            <div class="draggable" draggable="true" id="emballage4">
+                <img src="images/emballage4.png">
+            </div>
+            <div class="draggable" draggable="true" id="emballage5">
+                <img src="images/emballage5.png">
+            </div>
+            <div class="draggable" draggable="true" id="emballage6">
+                <img src="images/emballage6.png">
+            </div>
+            <div class="draggable" draggable="true" id="emballage7">
+                <img src="images/emballage7.png">
+            </div>
+            <div class="draggable" draggable="true" id="chargement1">
+                <img src="images/chargement1.png">
             </div>
         </div>
     </div>
