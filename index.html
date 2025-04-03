@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note de Valeur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-image {
+            position: relative;
+            width: 700px;
+            height: 570px;
+            background: url('images/NoteDeValeur.jpg') no-repeat center center;
+            background-size: cover;
+            border: 2px solid #ccc;
+        }
+
+        .slot {
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            border: 2px dashed #000;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Position des 9 emplacements sur l'image principale */
+        .slot:nth-child(1) { top: 510px; left: 365px; } /*Valeur en douane*/
+        .slot:nth-child(2) { top: 500px; left: 195px; } /*Valeur statistique*/
+        .slot:nth-child(3) { top: 10px; left: 375px; } /*Frontière UE*/
+        .slot:nth-child(4) { top: 255px; left: 140px; } /*Frontière FR*/
+        .slot:nth-child(5) { top: 255px; left: 560px; } /*Transp Ass hors UE*/
+        .slot:nth-child(6) { top: 430px; left: 105px; } /*Valeur 1ère desti*/
+        .slot:nth-child(7) { top: 320px; left: 290px; } /*Transport UE*/
+        .slot:nth-child(8) { top: 430px; left: 260px; } /*port de Genes*/
+        .slot:nth-child(9) { top: 335px; left: 95px; } /*Transport FR*/
+
+        .side-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Space between items */
+        }
+
+        .draggable {
+            width: 100px;
+            height: 60px;
+            border: 2px solid #000;
+            cursor: grab;
+        }
+
+        .draggable img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Image principale avec les emplacements -->
+        <div class="main-image" id="mainImage">
+            <div class="slot" data-slot="1"></div>
+            <div class="slot" data-slot="2"></div>
+            <div class="slot" data-slot="3"></div>
+            <div class="slot" data-slot="4"></div>
+            <div class="slot" data-slot="5"></div>
+            <div class="slot" data-slot="6"></div>
+            <div class="slot" data-slot="7"></div>
+            <div class="slot" data-slot="8"></div>
+            <div class="slot" data-slot="9"></div>
+        </div>
+
+        <!-- Images à déplacer -->
+        <div class="side-images">
+            <div class="draggable" draggable="true" id="TranspAssFr">
+                <img src="images/TranspAssFr.jpg">
+            </div>
+            <div class="draggable" draggable="true" id="TransAssUE">
+                <img src="images/TranspAssUE.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="FrontiereFR">
+                <img src="images/FrontiereFR.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="FrontiereUE">
+                <img src="images/FrontiereUE.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="MiseAQuaiPortDeGenes">
+                <img src="images/MiseAQuaiPortDeGenes.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="Valeur1ereDestination">
+                <img src="images/Valeur1ereDestination.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="ValeurEnDouane">
+                <img src="images/ValeurEnDouane.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="ValeurStatistique">
+                <img src="images/ValeurStatistique.jpg" >
+            </div>
+            <div class="draggable" draggable="true" id="TranspAssortHorsUE">
+                <img src="images/TranspAsshorsUE.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const draggables = document.querySelectorAll('.draggable');
+        const slots = document.querySelectorAll('.slot');
+
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', draggable.id);
+            });
+        });
+
+        slots.forEach(slot => {
+            slot.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            slot.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const draggableId = e.dataTransfer.getData('text/plain');
+                const draggableElement = document.getElementById(draggableId);
+                if (!slot.hasChildNodes()) {
+                    slot.appendChild(draggableElement);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
